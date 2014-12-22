@@ -1,0 +1,28 @@
+{% spaceless %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{% block title %}Welcome!{% endblock %}</title>
+		{% block stylesheets %}
+			{% stylesheets '@frontend_app_css' %}
+			<link rel="stylesheet" href="{{ asset_url }}"/>
+			{% endstylesheets %}
+		{% endblock %}
+		<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+	</head>
+	<body>
+		{% block body %}{% endblock %}
+		{% block javascripts %}
+			{% javascripts '@react' '@reqwest' %}
+			<script type="text/javascript" src="{{ asset_url }}"></script>
+			{% endjavascripts %}
+			{% javascripts '@frontend_app_jsx' %}
+			<script type="text/jsx" src="{{ asset_url }}"></script>
+			{% endjavascripts %}
+		{% endblock %}
+	</body>
+</html>
+{% endspaceless %}
+

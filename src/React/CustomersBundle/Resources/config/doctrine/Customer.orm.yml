@@ -1,0 +1,26 @@
+React\CustomersBundle\Entity\Customer:
+    type: entity
+    table: customers
+    repositoryClass: React\CustomersBundle\Entity\CustomerRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+            options:
+                unsigned: true
+    fields:
+        name:
+            type: string
+            length: '32'
+        state:
+            type: string
+            length: '2'
+        type:
+            type: string
+            length: '1'
+            nullable: true
+            options:
+                default: null
+    lifecycleCallbacks: {  }

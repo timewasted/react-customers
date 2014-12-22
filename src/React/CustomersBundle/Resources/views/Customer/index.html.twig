@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Customer management{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	<script type="text/jsx">
+		React.render(
+			<CustomerList dataSource="{{ path('customer') }}" />,
+			document.getElementById('customer-container')
+		);
+	</script>
+{% endblock %}
+
+{% block body -%}
+<div id="customer-container"></div>
+{% endblock %}

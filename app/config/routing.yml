@@ -1,0 +1,3 @@
+react_customers:
+    resource: "@ReactCustomersBundle/Resources/config/routing.yml"
+    prefix:   /

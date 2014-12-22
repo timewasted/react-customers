@@ -1,0 +1,2 @@
+react_customer:
+    resource: "@ReactCustomersBundle/Resources/config/routing/customer.yml"

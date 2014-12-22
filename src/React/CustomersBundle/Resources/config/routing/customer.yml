@@ -1,0 +1,20 @@
+customer:
+    path: /
+    defaults:
+        _controller: "ReactCustomersBundle:Customer:index"
+    requirements:
+        _method: get
+
+customer_update:
+    path: /customer/update
+    defaults:
+        _controller: "ReactCustomersBundle:Customer:update"
+    requirements:
+        _method: post|put
+
+customer_delete:
+    path: /customer/delete
+    defaults:
+        _controller: "ReactCustomersBundle:Customer:delete"
+    requirements:
+        _method: post|delete

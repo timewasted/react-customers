@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+@import "../../vendor/foundation/scss/normalize";
+@import "../../vendor/foundation/scss/foundation";
+
+.customer-filters {
+	dl {
+		@include sub-nav;
+		background-color: #f2f2f2;
+		margin-bottom: 0;
+		padding: 10px 10px 10px 0;
+
+		dd {
+			margin-bottom: 0.35rem;
+		}
+	}
+}
+
+#customer-list {
+	width: 100%;
+	tbody > tr {
+		&:hover {
+			background-color: scale-color($table-bg, $lightness: -10%);
+		}
+		&.even:hover,
+		&.alt:hover,
+		&:nth-of-type(even):hover {
+			background-color: scale-color($table-even-row-bg, $lightness: -10%);
+		}
+	}
+	.select {
+		width: 3.5rem;
+		input[type="checkbox"] {
+			margin: 0 0.5rem;
+			height: 1.25rem;
+			width: 1.25rem;
+		}
+	}
+	.name {
+	}
+	.state,
+	.type {
+		width: rem-calc(16 * 4);
+		text-align: center;
+	}
+	thead > tr > th {
+		cursor: pointer;
+		&.select,
+		&.actions {
+			cursor: default;
+		}
+		&.actions {
+			$action-count: 2;
+			width: rem-calc(22 * $action-count) + rem-calc(22px * $action-count);
+			text-align: center;
+		}
+	}
+	tbody > tr > td {
+		& input {
+			margin-bottom: 0;
+			& + small.error {
+				margin-bottom: 0;
+			}
+		}
+		&.actions button {
+			padding: rem-calc(6) 0;
+			margin-bottom: rem-calc(8);
+			width: 100%;
+		}
+		&.actions button:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

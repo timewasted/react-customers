@@ -1,0 +1,14 @@
+React\CustomersBundle\Entity\Customer:
+    properties:
+        name:
+            - Regex:
+                pattern: "/^[A-Za-z ]{5,32}$/"
+                message: "Must be between 5 and 32 characters, and only contain letters and spaces."
+        state:
+            - Regex:
+                pattern: "/^[A-Za-z]{2}$/"
+                message: "Must be two alphabetic characters."
+        type:
+            - Regex:
+                pattern: "/^[A-Ca-c]$/"
+                message: "Must be A, B, or C."

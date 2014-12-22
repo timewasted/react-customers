@@ -1,0 +1,4 @@
+services:
+#    react_customer.example:
+#        class: React\CustomersBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
